@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="global.css" />
+    <script src="./script.js" defer></script>
+    <script src="./components/switch.js" defer></script>
+    <script src="./components/comboBox.js" defer></script>
+    <script src="./components/comboOption.js" defer></script>
+</head>
+<body class="bg-primarybkg flex justify-center text-primarytext h-screen">
+    <main class="flex flex-col gap-8 pt-10 lg:w-3/5 xs:w-5/6 h-full">
+        <section id="control" class="bg-secondarybkg md:rounded-xl sm:rounded-lg xs:rounded-md flex md:flex-row xs:flex-col xs:items-center md:items-start w-full h-max">
+            <div id="side" class="bg-tertiarybkg flex justify-center md:rounded-l-xl sm:rounded-l-lg sm:rounded-t-none xs:rounded-t-md items-center md:w-1/3 xs:w-full h-full relative">
+                <img src="../../assets/eyes.svg" alt="eyes" class="absolute h-full xs:w-1/2 sm:w-1/4 md:w-full" />
+                <img src="../../assets/logo.svg" alt="logo" class="xs:w-1/2 sm:w-1/4 md:w-full drop-shadow-def dark:invert"/>
+            </div>
+            <div class="flex flex-col justify-start items-start w-full p-[2%] gap-[3%] h-full">
+                <div id="layer1" class="flex flex-row justify-between w-full font-roboto">
+                    <combo-box class="w-[48%]">
+                        <combo-option>English</combo-option>
+                        <combo-option>Hindi</combo-option>
+                        <combo-option>German</combo-option>
+                    </combo-box>
+                    <rounded-switch />
+                </div>
+                <p class="md:inline xs:hidden">Color Themes</p>
+                <div id="layer2" class="md:flex md:flex-row xs:hidden w-full gap-[4%] h-full">
+                    <div id="column1" class="flex flex-col w-full h-full gap-[6%]">
+                        <combo-box class="w-full">
+                            <combo-option onclick="colorChange('skills','teal')">Select Skills Theme</combo-option>
+                            <combo-option onclick="colorChange('skills','rose')">Rose</combo-option>
+                            <combo-option onclick="colorChange('skills','violet')">Violet</combo-option>
+                            <combo-option onclick="colorChange('skills','sky')">Sky</combo-option>
+                        </combo-box>
+                        <combo-box class="w-full">
+                            <combo-option onclick="colorChange('about','sky')">Select About Theme</combo-option>
+                            <combo-option onclick="colorChange('about','rose')">Rose</combo-option>
+                            <combo-option onclick="colorChange('about','violet')">Violet</combo-option>
+                            <combo-option onclick="colorChange('about','teal')">Teal</combo-option>
+                        </combo-box>
+                    </div>
+                    <div id="column2" class="flex flex-col w-full h-full gap-[6%]">
+                        <combo-box class="w-full">
+                            <combo-option>Select Projects Theme</combo-option>
+                        </combo-box>
+                        <combo-box class="w-full">
+                            <combo-option>Select Links  Theme</combo-option>
+                        </combo-box>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="bg-darkteal  md:rounded-xl sm:rounded-lg xs:rounded-md w-full">
+            <div id="header" class="py-[1%] px-[2%] bg-teal md:rounded-t-xl sm:rounded-t-lg  xs:rounded-t-md h-max drop-shadow-deflight">
+                <p class="drop-shadow-def tracking-wider font-bold md:text-2xl sm:text-xl xs:text-sm font-montserrat">Skills</p>
+            </div>
+            <div id="body" class=" w-full p-[2%] drop-shadow-def flex flex-row justify-between md:rounded-b-xl sm:rounded-b-lg xs:rounded-b-md">
+                <image src="./assets/techicons/js.svg" class="w-[6%] dark:invert"></image>
+                <image src="./assets/techicons/ts.svg" class="w-[6%] dark:invert"></image>
+                <image src="./assets/techicons/react.svg" class="w-[6%] dark:invert"></image>
+                <image src="./assets/techicons/python.svg" class="w-[6%] dark:invert"></image>
+                <image src="./assets/techicons/mysql.svg" class="w-[6%] dark:invert"></image>
+                <image src="./assets/techicons/rust.svg" class="w-[6%] dark:invert"></image>
+                <image src="./assets/techicons/go.svg" class="w-[8%] dark:invert"></image>
+            </div>
+        </section>
+        <section id="about" class="bg-darksky  md:rounded-xl sm:rounded-lg xs:rounded-md w-full">
+            <div id="header" class="py-[1%] px-[2%] bg-sky md:rounded-t-xl sm:rounded-t-lg  xs:rounded-t-md h-max drop-shadow-deflight">
+                <p class="drop-shadow-def tracking-wider font-bold md:text-2xl sm:text-xl xs:text-sm font-montserrat">About</p>
+            </div>
+            <div id="body" class=" w-full p-[2%] drop-shadow-def flex flex-row justify-between md:rounded-b-xl sm:rounded-b-lg xs:rounded-b-md">
+                <p><span class="font-medium">Hi, I am Jasn</span><br>
+                    <span class=" text-secondarytext">A enthusiast navigating the software universe. Bringing creativity to every line of code.  Ready for tech escapades and always up for a byte-sized challenge!</span>
+                </p>
+            </div>
+        </section>
+
+    </main>
+    <script>
+        function colorChange(sectionId, colorIn) {
+            // sky, teal, violet, rose
+            const headerColors = ['bg-teal','bg-sky','bg-violet','bg-rose'];
+            const bodyColors = ['bg-darkteal','bg-darksky','bg-darkviolet','bg-darkrose'];
+            const section = document.querySelector('#'+sectionId);
+            const header = section.querySelector('#header');
+            for (let i = 0; i < headerColors.length; i++) {
+                const color = headerColors[i];
+                if (header.classList.contains(color)) {
+                    header.classList.remove(color);
+                    section.classList.remove(bodyColors[i]);
+                }
+            }
+            section.classList.add('bg-dark'+colorIn);
+            header.classList.add('bg-'+colorIn);
+        }
+    </script>
+</body>
+</html>
