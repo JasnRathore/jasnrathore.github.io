@@ -1,8 +1,8 @@
 const switchTemplate = document.createElement('template');
 switchTemplate.innerHTML = `
 <link rel="stylesheet" href="global.css" />
-<div id='container' class='h-full aspect-2/1 rounded-full cursor-pointer'>
-<div id='switch' class=' bg-tertiarybkg w-full h-full rounded-full flex items-center '>
+<div id='container' class='h-[28px] w-[50px] rounded-full cursor-pointer'>
+<div id='switch' class='bg-tertiarybkg rounded-full flex items-center h-full'>
     <div id='slider' class=' bg-primarybkg flex items-center justify-center h-[75%] aspect-square rounded-full transition-transform duration-100 translate-x-[10%]'>
         <Image id='icon' src='../assets/icons/moon.svg' class='dark:invert size-3/5' />
     </div>
@@ -44,11 +44,11 @@ class roundedSwitch extends HTMLElement {
         if (state === 'true') {
             this.setAttribute('active','true');
             slider.classList.remove('translate-x-[10%]');
-            slider.classList.add('translate-x-[158%]');
+            slider.classList.add('translate-x-[130%]');
             icon.setAttribute('src','../assets/icons/sun.svg');
         } else if (state === 'false') {
             this.setAttribute('active','false');
-            slider.classList.remove('translate-x-[158%]');
+            slider.classList.remove('translate-x-[130%]');
             slider.classList.add('translate-x-[10%]');
             icon.setAttribute('src','../assets/icons/moon.svg');
         }

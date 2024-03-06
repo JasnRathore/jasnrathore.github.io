@@ -1,7 +1,7 @@
 const comboOptionTemplate = document.createElement('template');
 comboOptionTemplate.innerHTML = `
     <link rel="stylesheet" href="./global.css" />
-    <button class='bg-none hover:bg-primarybkg w-full text-left p-[2%] rounded-md'><slot /></button>
+    <button class='bg-none hover:bg-selector w-full text-left p-[2%] rounded-md'><slot /></button>
 `;
 
 class comboOption extends HTMLElement {

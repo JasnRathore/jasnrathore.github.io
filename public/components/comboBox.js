@@ -5,7 +5,7 @@ comboBoxTemplate.innerHTML = `
     <button id='selector' class='bg-tertiarybkg border-none py-[1%] px-[2%] w-full rounded-md flex flex-row justify-between items-center drop-shadow-def'>
         <p id='text' class='pl-[6%]'><p> <image src='../assets/icons/caret-sort.svg' class='dark:invert'></image>
     </button>
-    <div id='options' class=' hidden absolute w-full overflow-clip rounded-lg p-[5%] bg-tertiarybkg border-[0.1px] border-white/30 z-0'>
+    <div id='options' class=' hidden absolute w-full overflow-clip rounded-lg p-[5%] bg-tertiarybkg border-[0.1px] dark:border-white/30 border-black/30 z-0'>
         <slot />
     <div>
     </div>
@@ -80,22 +80,13 @@ class comboBox extends HTMLElement {
         }
     }
     toggelDarkMode() {
-        const status = document.documentElement.classList.contains('dark');
+        const status = (document.documentElement.getAttribute('data-mode') === 'dark');
         if (status) {
-            this.shadowRoot.querySelector('#container').classList.add('dark')
+            this.shadowRoot.querySelector('#container').setAttribute('data-mode','dark');
         } else {
-            this.shadowRoot.querySelector('#container').classList.remove('dark')
+            this.shadowRoot.querySelector('#container').setAttribute('data-mode', 'light');
         }
     }
-    toggelDarkModeForOptions() {
-        const status = document.documentElement.classList.contains('dark');
-        if (status) {
-            this.shadowRoot.querySelector('#container').classList.add('dark')
-        } else {
-            this.shadowRoot.querySelector('#container').classList.remove('dark')
-        }
-    }
-
 }
 
 window.customElements.define('combo-box', comboBox);

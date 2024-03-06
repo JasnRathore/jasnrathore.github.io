@@ -9,6 +9,7 @@
         --primarybkg: 224deg 71.43% 4.12%;
         --secondarybkg: 222.22deg 47.37% 11.18%;
         --tertiarybkg: 217.24deg 32.58% 17.45%;
+        --selector: 220deg 29% 25%;
         --primarytext: 0deg 0% 100%;
         --secondarytext: 216 12.2% 83.92%;
 
@@ -25,6 +26,7 @@
         --primarybkg: 0deg 0% 100%;
         --secondarybkg: 214.29deg 31.82% 91.37%;
         --tertiarybkg: 215deg 20.22% 65.1%;
+        --selector: 218deg 17% 54%;
         --primarytext: 224deg 71.43% 4.12%;
         --secondarytext: 215 27.91% 16.86%;
 
@@ -36,5 +38,10 @@
         --darksky: 198.63deg 88.66% 48.43%;
         --rose: 349.72deg 89.16% 60.2%;
         --darkrose: 349.72deg 89.16% 60.2%;
+    }
+
+    .switch {
+        height: 100%;
+        width: 250%;
     }
 }

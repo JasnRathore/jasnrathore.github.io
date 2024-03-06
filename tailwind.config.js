@@ -9,6 +9,7 @@ module.exports = {
         secondarybkg: "hsl(var(--secondarybkg) / <alpha-value>)",
         tertiarybkg: "hsl(var(--tertiarybkg) / <alpha-value>)",
         primarytext:"hsl(var(--primarytext) / <alpha-value>)",
+        selector:"hsl(var(--selector) / <alpha-value>)",
         secondarytext:"hsl(var(--secondarytext) / <alpha-value>)",
 
         teal: "hsl(var(--teal) / <alpha-value>)",
