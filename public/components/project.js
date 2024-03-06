@@ -9,8 +9,8 @@ projectTemplate.innerHTML = `
             </div>
             <slot name='description' class="text-secondarytext text-ellipsis overflow-hidden" ></slot>
         </div>
-        <a href='' class='w-[5%] h-full'>
-            <image src='../assets/icons/open-in-new-window.svg' class='w-full dark:invert'></image>
+        <a id='redirect' href='' target="_blank" class='w-[5%] h-full'>
+            <image src='../assets/icons/external-link.svg' class='w-full dark:invert drop-shadow-def'></image>
         </a>
     </div>
 `;
@@ -20,8 +20,11 @@ class projectElement extends HTMLElement {
         super();
         // title, description, technologies
         this.attachShadow({ mode: 'open' });
-        this.classList.add('relative');
         this.shadowRoot.appendChild(projectTemplate.content.cloneNode(true));
+        const link = this.getAttribute('link')
+        const redirect = this.shadowRoot.querySelector('#redirect');
+        redirect.setAttribute('href',link);
+
         this.toggelDarkMode();
     }
     connectedCallback() {

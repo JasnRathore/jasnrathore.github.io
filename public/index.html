@@ -93,7 +93,7 @@
                 <p class="drop-shadow-def tracking-wider font-bold md:text-2xl sm:text-xl xs:text-sm font-montserrat">Projects</p>
             </div>
             <div id="body" class=" w-full p-[2%] flex flex-col justify-between md:rounded-b-xl sm:rounded-b-lg xs:rounded-b-md h-max">
-                <project-element class="w-full">
+                <project-element class="w-full" link="/portfolio">
                     <p slot="title" class="md:w-1/2 xs:w-full ">Portfolio {This Website}</p>
                     <div slot="logos" class='md:flex flex-row w-1/2 justify-end xs:hidden gap-3'>
                         <image src="./assets/techicons/js.svg" class="w-[6%] dark:invert"></image>
@@ -102,10 +102,11 @@
                     </div>
                     <p slot="description">A Display of my skills and some Amateur workarounds</p>
                 </project-element>
-                <project-element class="w-full">
+                <project-element class="w-full"link='/hades'>
                     <p slot="title" class="md:w-1/2 xs:w-full ">Hades</p>
                     <div slot="logos" class='md:flex flex-row w-1/2 justify-end xs:hidden gap-3'>
                         <image src="./assets/techicons/python.svg" class="w-[6%] dark:invert"></image>
+                        <image src="./assets/techicons/mysql.svg" class="w-[6%] dark:invert"></image>
                     </div>
                     <p slot="description"> A CLI CRUD app for maintaing prison data {School Project}</p>
                 </project-element>
@@ -116,9 +117,16 @@
                 <p class="drop-shadow-def tracking-wider font-bold md:text-2xl sm:text-xl xs:text-sm font-montserrat">Links</p>
             </div>
             <div id="body" class=" w-full p-[2%] drop-shadow-def flex flex-row justify-around md:rounded-b-xl sm:rounded-b-lg xs:rounded-b-md">
-                <image src="./assets/techicons/github.svg" class="w-[6%] dark:invert"></image>
-                <image src="./assets/techicons/linkedin.svg" class="w-[6%] dark:invert"></image>
+                <a href="/github" target="_blank" class="w-[6%]"><image src="./assets/techicons/github.svg" class="dark:invert"></image></a>
+                <a href="/linkedin" target="_blank" class="w-[6%]"><image src="./assets/techicons/linkedin.svg" class="dark:invert"></image></a>
             </div>
+        </section>
+
+        <section id="attribution" class="bg-secondarybkg  md:rounded-t-xl sm:rounded-t-lg xs:rounded-t-md w-full py-[2%] flex justify-center">
+            <p class="tracking-wider font-medium md:text-2xl sm:text-xl xs:text-sm font-montserrat">
+                <span class="dark:drop-shadow-[0_4px_1px_rgba(255,255,255,0.2)] drop-shadow-def ">Style inspired by</span>
+                <a href="/embed" target="_blank" class="text-rose drop-shadow-[0_4px_1px_rgba(244,63,94,0.2)] border-b-[0.1px] border-rose">embed</a>
+            </p>
         </section>
 
     </main>
