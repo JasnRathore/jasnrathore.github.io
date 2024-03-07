@@ -13,10 +13,10 @@
 </head>
 <body class="bg-primarybkg flex justify-center text-primarytext" >
     <main class="flex flex-col gap-8 pt-10 lg:w-3/5 xs:w-5/6 h-full">
-        <section id="control" class="bg-secondarybkg md:rounded-xl sm:rounded-lg xs:rounded-md flex md:flex-row xs:flex-col xs:items-center w-full">
+        <section id="control" class="bg-secondarybkg md:rounded-xl sm:rounded-lg xs:rounded-md flex md:flex-row xs:flex-col xs:items-center w-full overflow-clip">
             <div id="side" class="bg-tertiarybkg flex justify-center md:rounded-l-xl md:rounded-t-none sm:rounded-t-lg xs:rounded-t-md items-center md:w-1/3 xs:w-full h-full relative">
-                <img src="./assets/eyes.svg" alt="eyes" class="absolute h-full xs:w-1/3 sm:w-1/4 md:w-full" />
-                <img src="./assets/logo.svg" alt="logo" class="xs:w-1/3 sm:w-1/4 md:w-full drop-shadow-def dark:invert"/>
+                <img src="../../assets/eyes.svg" alt="eyes" class="absolute h-full xs:w-1/3 sm:w-1/4 md:w-full" />
+                <img src="../../assets/logo.svg" alt="logo" class="xs:w-1/3 sm:w-1/4 md:w-full drop-shadow-def dark:invert"/>
             </div>
             <div class="flex flex-col justify-start items-start w-full p-[2%] sm:gap-2 xs:gap-1">
                 <div id="layer1" class="flex flex-row justify-between w-full">
@@ -93,7 +93,7 @@
                 <p class="drop-shadow-def tracking-wider font-bold md:text-2xl sm:text-xl xs:text-sm font-montserrat">Projects</p>
             </div>
             <div id="body" class=" w-full p-[2%] flex flex-col justify-between md:rounded-b-xl sm:rounded-b-lg xs:rounded-b-md h-max">
-                <project-element class="w-full" link="https://github.com/JasnRathore/jasnrathore.github.io">
+                <project-element class="w-full" link="/portfolio">
                     <p slot="title" class="md:w-1/2 xs:w-full ">Portfolio {This Website}</p>
                     <div slot="logos" class='md:flex flex-row w-1/2 justify-end xs:hidden gap-3'>
                         <image src="./assets/techicons/js.svg" class="w-[6%] dark:invert"></image>
@@ -102,7 +102,7 @@
                     </div>
                     <p slot="description">A Display of my skills and some Amateur workarounds</p>
                 </project-element>
-                <project-element class="w-full"link='https://github.com/JasnRathore/Hades'>
+                <project-element class="w-full"link='/hades'>
                     <p slot="title" class="md:w-1/2 xs:w-full ">Hades</p>
                     <div slot="logos" class='md:flex flex-row w-1/2 justify-end xs:hidden gap-3'>
                         <image src="./assets/techicons/python.svg" class="w-[6%] dark:invert"></image>
@@ -117,15 +117,15 @@
                 <p class="drop-shadow-def tracking-wider font-bold md:text-2xl sm:text-xl xs:text-sm font-montserrat">Links</p>
             </div>
             <div id="body" class=" w-full p-[2%] drop-shadow-def flex flex-row justify-around md:rounded-b-xl sm:rounded-b-lg xs:rounded-b-md">
-                <a href="https://github.com/JasnRathore" target="_blank" class="w-[6%]"><image src="./assets/techicons/github.svg" class="dark:invert"></image></a>
-                <a href="https://www.linkedin.com/in/jasn-rathore-884644256" target="_blank" class="w-[6%]"><image src="./assets/techicons/linkedin.svg" class="dark:invert"></image></a>
+                <a href="/github" target="_blank" class="w-[6%]"><image src="./assets/techicons/github.svg" class="dark:invert"></image></a>
+                <a href="/linkedin" target="_blank" class="w-[6%]"><image src="./assets/techicons/linkedin.svg" class="dark:invert"></image></a>
             </div>
         </section>
 
         <section id="attribution" class="bg-secondarybkg  md:rounded-t-xl sm:rounded-t-lg xs:rounded-t-md w-full py-[2%] flex justify-center">
             <p class="tracking-wider font-medium md:text-2xl sm:text-xl xs:text-sm font-montserrat">
                 <span class="dark:drop-shadow-[0_4px_1px_rgba(255,255,255,0.2)] drop-shadow-def ">Style inspired by</span>
-                <a href="https://astolfo.co" target="_blank" class="text-rose drop-shadow-[0_4px_1px_rgba(244,63,94,0.2)] border-b-[0.1px] border-rose">embed</a>
+                <a href="/embed" target="_blank" class="text-rose drop-shadow-[0_4px_1px_rgba(244,63,94,0.2)] border-b-[0.1px] border-rose">embed</a>
             </p>
         </section>
 
