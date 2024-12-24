@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasn Rathore</title>
+    <link rel="stylesheet" href="global.css" />
+    <script src="./script.js" defer></script>
+    <script src="./components/switch.js" defer></script>
+    <script src="./components/comboBox.js" defer></script>
+    <script src="./components/comboOption.js" defer></script>
+    <script src="./components/project.js" defer></script>
+</head>
+<body class="bg-primarybkg flex justify-center text-primarytext" >
+    <main class="flex flex-col gap-8 pt-10 lg:w-3/5 xs:w-5/6 h-full">
+        <section id="control" class="bg-secondarybkg md:rounded-xl sm:rounded-lg xs:rounded-md flex md:flex-row xxs:flex-col xs:items-center w-full">
+            <div id="side" class="bg-tertiarybkg flex justify-center md:rounded-l-xl md:rounded-tl-xl md:rounded-t-none sm:rounded-t-lg xxs:rounded-t-md items-center md:w-1/3 xs:w-full h-full relative">
+                <img src="../../assets/eyes.svg" alt="eyes" class="absolute h-full xxs:w-1/3 sm:w-1/4 md:w-full" />
+                <img src="../../assets/lightlogo.svg" alt="logo" class="xxs:w-1/3 sm:w-1/4 md:w-full drop-shadow-def dark:invert"/>
+            </div>
+            <div class="flex flex-col justify-start items-start w-full p-[2%] sm:gap-2 xs:gap-1">
+                <div id="layer1" class="flex flex-row justify-between w-full">
+                   Toggle Dark Mode
+                    <!--combo-box class="w-[48%]">
+                        <combo-option>English</combo-option>
+                        <combo-option>Hindi</combo-option>
+                        <combo-option>German</combo-option>
+                    </combo-box-->
+                    <rounded-switch />
+                </div>
+                <p class="md:inline xs:hidden xxs:hidden font-bold">Color Themes</p>
+                <div id="layer2" class="md:flex md:flex-row xs:hidden xxs:hidden w-full gap-3 h-max">
+                    <div id="column1" class="flex flex-col w-full h-full md:gap-3 sm:gap-2 xs:gap-1">
+                    <div class="flex flex-row gap-2">
+                        <p class="text-xl w-28">Skills:</p>
+                        <combo-box class="w-full">
+                            <combo-option onclick="colorChange('skills','teal')">Teal</combo-option>
+                            <combo-option onclick="colorChange('skills','rose')">Rose</combo-option>
+                            <combo-option onclick="colorChange('skills','violet')">Violet</combo-option>
+                            <combo-option onclick="colorChange('skills','sky')">Sky</combo-option>
+                        </combo-box>
+                    </div>
+                    <div class="flex flex-row gap-2">
+                        <p class="text-xl w-28">About: </p>
+                        <combo-box class="w-full">
+                            <combo-option onclick="colorChange('about','sky')">Sky</combo-option>
+                            <combo-option onclick="colorChange('about','teal')">Teal</combo-option>
+                            <combo-option onclick="colorChange('about','rose')">Rose</combo-option>
+                            <combo-option onclick="colorChange('about','violet')">Violet</combo-option>
+                        </combo-box>
+                    </div>
+                    </div>
+                    <div id="column2" class="flex flex-col w-full h-full md:gap-3 sm:gap-2 xs:gap-1">
+                        <div class="flex flex-row gap-2">
+                            <p class="text-xl w-28">Projects:</p>
+                        <combo-box class="w-full">
+                                <combo-option onclick="colorChange('projects','violet')">Violet</combo-option>
+                                <combo-option onclick="colorChange('projects','teal')">Teal</combo-option>
+                                <combo-option onclick="colorChange('projects','rose')">Rose</combo-option>
+                                <combo-option onclick="colorChange('projects','sky')">Sky</combo-option>
+                            </combo-box>
+                        </div>
+                        <div class="flex flex-row gap-2">
+                            <p class="text-xl w-28">Links: </p>
+                            <combo-box class="w-full">
+                                <combo-option onclick="colorChange('links','rose')">Rose</combo-option>
+                                <combo-option onclick="colorChange('links','teal')">Teal</combo-option>
+                                <combo-option onclick="colorChange('links','sky')">Sky</combo-option>
+                                <combo-option onclick="colorChange('links','violet')">Violet</combo-option>
+                            </combo-box>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="bg-darkteal  md:rounded-xl sm:rounded-lg xs:rounded-md w-full">
+            <div id="header" class="py-[1%] px-[2%] bg-teal md:rounded-t-xl sm:rounded-t-lg  xs:rounded-t-md h-max drop-shadow-deflight">
+                <p class="drop-shadow-def tracking-wider font-bold md:text-2xl sm:text-xl xs:text-sm font-montserrat">Skills</p>
+            </div>
+            <div id="body" class=" w-full p-[2%] drop-shadow-def flex flex-row justify-around md:rounded-b-xl sm:rounded-b-lg xs:rounded-b-md">
+                <image src="./assets/techicons/js.svg" class="w-[6%] dark:invert"></image>
+                <image src="./assets/techicons/ts.svg" class="w-[6%] dark:invert"></image>
+                <image src="./assets/techicons/tailwind.svg" class="w-[8%] dark:invert"></image>
+                <image src="./assets/techicons/react.svg" class="w-[6%] dark:invert"></image>
+                <image src="./assets/techicons/python.svg" class="w-[6%] dark:invert"></image>
+                <image src="./assets/techicons/mysql.svg" class="w-[6%] dark:invert"></image>
+                <image src="./assets/techicons/rust.svg" class="w-[6%] dark:invert"></image>
+                <image src="./assets/techicons/go.svg" class="w-[8%] dark:invert"></image>
+            </div>
+        </section>
+
+        <section id="about" class="bg-darksky  md:rounded-xl sm:rounded-lg xs:rounded-md w-full">
+            <div id="header" class="py-[1%] px-[2%] bg-sky md:rounded-t-xl sm:rounded-t-lg  xs:rounded-t-md h-max drop-shadow-deflight">
+                <p class="drop-shadow-def tracking-wider font-bold md:text-2xl sm:text-xl xs:text-sm font-montserrat">About</p>
+            </div>
+            <div id="body" class=" w-full p-[2%] flex flex-row justify-between md:rounded-b-xl sm:rounded-b-lg xs:rounded-b-md">
+                <p><span class="font-medium">Hi, I am Jasn</span><br>
+                    <span class=" text-secondarytext">
+                    I am student who likes building things.
+                    </span>
+                </p>
+            </div>
+        </section>
+
+        <section id="projects" class="bg-darkviolet  md:rounded-xl sm:rounded-lg xs:rounded-md w-full">
+            <div id="header" class="py-[1%] px-[2%] bg-violet md:rounded-t-xl sm:rounded-t-lg  xs:rounded-t-md h-max drop-shadow-deflight">
+                <p class="drop-shadow-def tracking-wider font-bold md:text-2xl sm:text-xl xs:text-sm font-montserrat">Projects</p>
+            </div>
+            <div id="body" class=" w-full p-[2%] flex flex-col justify-between md:rounded-b-xl sm:rounded-b-lg xs:rounded-b-md h-max">
+                <project-element class="w-full" link="https://github.com/JasnRathore/jasnrathore.github.io">
+                    <p slot="title" class="md:w-1/2 xs:w-full ">Portfolio {This Website}</p>
+                    <div slot="logos" class='md:flex flex-row w-1/2 justify-end xxs:hidden gap-3'>
+                        <image src="./assets/techicons/js.svg" class="w-[6%] dark:invert"></image>
+                        <image src="./assets/techicons/tailwind.svg" class="w-[8%] dark:invert"></image>
+                        <image src="./assets/techicons/go.svg" class="w-[10%] dark:invert"></image>
+                    </div>
+                    <p slot="description">A Display of my skills and some Amateur workarounds<br>The Current Site is static so it does not use Go-lang anymore</p>
+                </project-element>
+                <project-element class="w-full" link='https://github.com/JasnRathore/Hades'>
+                    <p slot="title" class="md:w-1/2 xs:w-full ">Hades</p>
+                    <div slot="logos" class='md:flex flex-row w-1/2 justify-end xxs:hidden gap-3'>
+                        <image src="./assets/techicons/python.svg" class="w-[6%] dark:invert"></image>
+                        <image src="./assets/techicons/mysql.svg" class="w-[6%] dark:invert"></image>
+                    </div>
+                    <p slot="description"> A CLI CRUD app for maintaing prison data {School Project}</p>
+                </project-element>
+                <project-element class="w-full" link='https://github.com/JasnRathore/hadescpp'>
+                    <p slot="title" class="md:w-1/2 xs:w-full ">HadesCpp</p>
+                    <div slot="logos" class='md:flex flex-row w-1/2 justify-end xxs:hidden gap-3'>
+                        <image src="./assets/techicons/cpp.svg" class="w-[6%] dark:invert"></image>
+                        <image src="./assets/techicons/csv.svg" class="w-[6%] dark:invert"></image>
+                    </div>
+                    <p slot="description"> A GUI CRUD app for maintaing prison data {School Turned Personal Project}</p>
+                </project-element>
+                <project-element class="w-full" link='https://github.com/JasnRathore/BUISQL'>
+                    <p slot="title" class="md:w-1/2 xs:w-full ">BUISQL</p>
+                    <div slot="logos" class='md:flex flex-row w-1/2 justify-end xxs:hidden gap-3'>
+                        <image src="./assets/techicons/js.svg" class="w-[6%] dark:invert"></image>
+                        <image src="./assets/techicons/tailwind.svg" class="w-[8%] dark:invert"></image>
+                        <image src="./assets/techicons/python.svg" class="w-[6%] dark:invert"></image>
+                        <image src="./assets/techicons/mysql.svg" class="w-[6%] dark:invert"></image>
+                    </div>
+                    <p slot="description">A simple GUI application built to view MYSQL Data without using the command line</p>
+                </project-element>
+                <project-element class="w-full" link='https://github.com/JasnRathore/jyntaxe'>
+                    <p slot="title" class="md:w-1/2 xs:w-full">JYNTAXE</p>
+                    <div slot="logos" class='md:flex flex-row w-1/2 justify-end xxs:hidden gap-3'>
+                        <image src="./assets/techicons/tailwind.svg" class="w-[8%] dark:invert"></image>
+                        <image src="./assets/techicons/react.svg" class="w-[6%] dark:invert"></image>
+                        <image src="./assets/techicons/rust.svg" class="w-[6%] dark:invert"></image>
+                    </div>
+                    <p slot="description">A Minimalist Editor made Using Monaco Editor, React, Tauri </p>
+                </project-element>
+                <project-element class="w-full" link='https://github.com/JasnRathore/hadescpp'>
+                    <p slot="title" class="md:w-1/2 xs:w-full ">JCommandChain (JCC)</p>
+                    <div slot="logos" class='md:flex flex-row w-1/2 justify-end xxs:hidden gap-3'>
+                        <image src="./assets/techicons/go.svg" class="w-[10%] dark:invert"></image>
+                    </div>
+                    <p slot="description">CLI Tool That Allows you to alias Commands/scripts or run multiple of them concurrently</p>
+                    
+                </project-element>
+        </section>
+
+        <section id="links" class="bg-darkrose  md:rounded-xl sm:rounded-lg xs:rounded-md w-full">
+            <div id="header" class="py-[1%] px-[2%] bg-rose md:rounded-t-xl sm:rounded-t-lg  xs:rounded-t-md h-max drop-shadow-deflight">
+                <p class="drop-shadow-def tracking-wider font-bold md:text-2xl sm:text-xl xs:text-sm font-montserrat">Links</p>
+            </div>
+            <div id="body" class=" w-full p-[2%] drop-shadow-def flex flex-row justify-around md:rounded-b-xl sm:rounded-b-lg xs:rounded-b-md">
+                <a href="https://github.com/JasnRathore" target="_blank" class="w-[5%]"><image src="./assets/techicons/github.svg" class="dark:invert"></image></a>
+                <a href="https://www.linkedin.com/in/jasn-rathore-884644256" target="_blank" class="w-[5%]"><image src="./assets/techicons/linkedin.svg" class="dark:invert"></image></a>
+                <!--a href="https://jasnrathore.github.io/blog/" target="_blank" class="w-[5%]"><image src="./assets/icons/blog.svg" class="dark:invert"></image></a-->
+            </div>
+        </section>
+
+        <section id="attribution" class="bg-secondarybkg  md:rounded-t-xl sm:rounded-t-lg xs:rounded-t-md w-full py-[2%] flex justify-center">
+            <p class="tracking-wider font-medium md:text-2xl sm:text-xl xs:text-sm font-montserrat">
+                <span class="dark:drop-shadow-[0_4px_1px_rgba(255,255,255,0.2)] drop-shadow-def ">Style inspired by</span>
+                <a href="https://astolfo.co" target="_blank" class="text-rose drop-shadow-[0_4px_1px_rgba(244,63,94,0.2)] border-b-[0.1px] border-rose">embed</a>
+            </p>
+        </section>
+
+    </main>
+    <script>
+        function colorChange(sectionId, colorIn) {
+            // sky, teal, violet, rose
+            const headerColors = ['bg-teal','bg-sky','bg-violet','bg-rose'];
+            const bodyColors = ['bg-darkteal','bg-darksky','bg-darkviolet','bg-darkrose'];
+            const section = document.querySelector('#'+sectionId);
+            const header = section.querySelector('#header');
+            for (let i = 0; i < headerColors.length; i++) {
+                const color = headerColors[i];
+                if (header.classList.contains(color)) {
+                    header.classList.remove(color);
+                    section.classList.remove(bodyColors[i]);
+                }
+            }
+            section.classList.add('bg-dark'+colorIn);
+            header.classList.add('bg-'+colorIn);
+        }
+    </script>
+</body>
+</html>

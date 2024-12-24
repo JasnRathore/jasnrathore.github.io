@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('public/assets/fonts/montserrat.ttf');
+
+@layer base {
+    :root[data-mode="dark"] {
+        --primarybkg: 224deg 71.43% 4.12%;
+        --secondarybkg: 222.22deg 47.37% 11.18%;
+        --tertiarybkg: 217.24deg 32.58% 17.45%;
+        --selector: 220deg 29% 25%;
+        --primarytext: 0deg 0% 100%;
+        --secondarytext: 216 12.2% 83.92%;
+
+        --teal: 173.41deg 80.39% 40%;
+        --darkteal: 174.67deg 83.85% 31.57%;
+        --violet: 258.31deg 89.53% 66.27%;
+        --darkviolet: 262.12deg 83.26% 57.84%;
+        --sky: 198.63deg 88.66% 48.43%;
+        --darksky: 200.41deg 98.01% 39.41%;
+        --rose: 349.72deg 89.16% 60.2%;
+        --darkrose: 346.84deg 77.17% 49.8%;
+    }
+    :root[data-mode="light"] {
+        --primarybkg: 0deg 0% 100%;
+        --secondarybkg: 214.29deg 31.82% 91.37%;
+        --tertiarybkg: 215deg 20.22% 65.1%;
+        --selector: 218deg 17% 54%;
+        --primarytext: 224deg 71.43% 4.12%;
+        --secondarytext: 215 27.91% 16.86%;
+
+        --teal: 173.41deg 80.39% 40%;
+        --darkteal: 173.41deg 80.39% 40%;
+        --violet: 258.31deg 89.53% 66.27%;
+        --darkviolet: 258.31deg 89.53% 66.27%;
+        --sky: 198.63deg 88.66% 48.43%;
+        --darksky: 198.63deg 88.66% 48.43%;
+        --rose: 349.72deg 89.16% 60.2%;
+        --darkrose: 349.72deg 89.16% 60.2%;
+    }
+
+    .switch {
+        height: 100%;
+        width: 250%;
+    }
+}
